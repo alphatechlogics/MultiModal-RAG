@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-RAG API UI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Multi-RAG API</h1>
+        <p>Upload a PDF and ask a question about it.</p>
+      </header>
+
+      <!-- PDF Upload Section -->
+      <section class="upload-section">
+        <h2>Upload PDF</h2>
+        <input type="file" id="pdfFile" accept=".pdf" />
+        <button onclick="uploadPDF()">Upload PDF</button>
+        <div id="uploadMessage" class="message"></div>
+        <!-- Message area for feedback -->
+      </section>
+
+      <!-- Query Section -->
+      <section class="query-section" id="querySection">
+        <h2>Ask a Question</h2>
+        <textarea
+          id="queryInput"
+          placeholder="Enter your question here"
+        ></textarea>
+        <button onclick="submitQuery()" id="submitQueryBtn">
+          Submit Query
+        </button>
+      </section>
+
+      <!-- Query Result Section -->
+      <section id="result" class="result"></section>
+
+      <button id="clearBtn" onclick="clearResults()">Clear Results</button>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

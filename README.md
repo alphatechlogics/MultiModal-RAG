@@ -19,7 +19,7 @@
 
 Before starting, ensure you have the following set up:
 
-- **Python 3.12+**
+- **Python 3.10.12++**
 - **pip** (Python’s package manager)
 - **Node.js** and **npm** (if you need to adjust frontend components)
 - **Streamlit**: For the frontend interface

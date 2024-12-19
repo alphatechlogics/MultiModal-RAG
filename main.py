@@ -22,7 +22,10 @@ import base64
 import os
 
 from langchain_core.messages import HumanMessage
+from dotenv import load_dotenv
 
+load_dotenv()
+embedding_function = OpenAIEmbeddings(api_key=os.environ.get('OPENAI_API_KEY'))
 
 def plt_img_base64(img_base64):
     """Disply base64 encoded string as image"""
@@ -180,7 +183,7 @@ if __name__ == "__main__":
 
         # The vectorstore to use to index the summaries
     vectorstore = Chroma(
-        collection_name="mm_rag_js_test", embedding_function=OpenAIEmbeddings()
+        collection_name="mm_rag_js_test", embedding_function=OpenAIEmbeddings(api_key=os.environ.get('OPENAI_API_KEY'))
     )
 
     # Create retriever

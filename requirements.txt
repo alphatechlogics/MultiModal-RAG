@@ -197,7 +197,7 @@ sympy==1.13.1
 tenacity==8.5.0
 tiktoken==0.8.0
 timm==1.0.12
-tokenizers==0.21.0
+tokenizers<=0.20.3 
 tomli==2.2.1
 torch==2.5.1
 torchvision==0.20.1
